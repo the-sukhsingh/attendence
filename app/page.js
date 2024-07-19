@@ -26,6 +26,7 @@ function App() {
       setSubject(e.target.value)
   }
   const handleAdd = (e) => {
+    if(subject.subject !== ""){
     toast.success('Subject Added!', {
       position: "bottom-right",
       autoClose: 2500,
@@ -41,7 +42,7 @@ function App() {
       setSubject({subject:"",attended:0,notAttended:0})
       console.log(subjects)
       saveToLS()
-  }
+  }}
 
   return (
       <>
