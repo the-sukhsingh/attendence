@@ -15,7 +15,23 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
+.clbtn {
+  width: 100px;
+  height: 40px;
+  background-color: rgb(200, 189, 189);
+  border: none;
+  color: black;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.342);
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .5s;
+}
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -30,4 +46,26 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+@media screen and (min-width: 1024px) {
+
+  .clbtn:hover .effect {
+    transform: scale(1.5);
+    transform-origin: center;
+    opacity: 1;
+    transition-duration: .5s;
+  }
+  
+  .clbtn:hover {
+    box-shadow: 0px 0px 5px rgb(255, 255, 255),
+    0px 0px 10px rgb(255, 255, 255),
+    0px 0px 30px rgb(254, 254, 254);
+    transition-duration: .7s;
+  }
+}
+
+.reportmenu{
+  box-shadow: 0px 0px 12px rgb(255, 255, 255), 0px 0px 20px rgb(255, 255, 255), 0px 0px 21px rgb(254, 254, 254);
+    /* transition: all .7s; */
+    transition-duration: .7s;
 }
