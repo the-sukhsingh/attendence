@@ -27,25 +27,31 @@ function App() {
     return indianDate;
   };
   const deletlast = (lists,boolean) => {
-    let i = lists.length-1
-    let deleted = false
-    console.log(i)
-    while (i>0){ {
+    if(lists.length === 1){
+      return []
+    }
+    else{
+
+      let i = lists.length-1
+      let deleted = false
+      console.log(i)
+      while (i>0){ 
         if(!deleted){
-            console.log(i)
-            if(lists[i].attended === boolean){
-              lists.splice(i,1)
-              deleted = true
+          console.log(i)
+          if(lists[i].attended === boolean){
+            lists.splice(i,1)
+            deleted = true
             }
             else{
                 console.log("not pop")
-            }}
-        if(deleted){
-            break}
-            i--
-        }
-    }
-    return lists
+              }}
+              if(deleted){
+                break}
+                i--
+              
+            }
+            return lists
+          }
     }
   useEffect(() => {
     let substring = localStorage.getItem("subjects");
